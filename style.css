@@ -1,0 +1,385 @@
+/* Сброс и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: #1d1d1f;
+    background-color: #f5f5f7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #e5e5e7;
+    position: sticky;
+    top: 0;
+    background-color: rgba(245, 245, 247, 0.92);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.logo-icon {
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1d1d1f;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #510002;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #510002;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Основной контент */
+main {
+    padding: 60px 0 100px;
+}
+
+/* Герой секция */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.photo-container {
+    flex: 0 0 280px;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: #1d1d1f;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #510002;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #515154;
+    max-width: 600px;
+}
+
+/* Секции */
+.section {
+    margin-bottom: 100px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1d1d1f;
+}
+
+/* Обо мне */
+.about-content {
+    max-width: 800px;
+    font-size: 18px;
+    color: #515154;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Навыки - Технологический стек (единый блок) */
+.skills-container {
+    background-color: white;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-container:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    background-color: #f8f8fa;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.skill-item:hover {
+    background-color: #f0f0f5;
+    border-color: #e0e0e8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.1);
+}
+
+.skill-item i {
+    font-size: 20px;
+    margin-right: 14px;
+    color: #510002;
+    width: 24px;
+    text-align: center;
+}
+
+.skill-item span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+/* Контакты */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.contact-card:hover {
+    border-color: #e5e5e7;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-right: 15px;
+    color: white;
+}
+
+.telegram {
+    background-color: #0088cc;
+}
+
+.email {
+    background-color: #d44638;
+}
+
+.hh {
+    background-color: #d6001c;
+}
+
+.github {
+    background-color: #333;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1d1d1f;
+}
+
+.contact-detail {
+    font-size: 14px;
+    color: #515154;
+}
+
+.contact-arrow {
+    color: #8e8e93;
+    font-size: 14px;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #e5e5e7;
+    color: #515154;
+}
+
+.footer-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-subtext {
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .photo-container {
+        flex: 0 0 auto;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    nav {
+        gap: 20px;
+    }
+    
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .skills-container {
+        padding: 30px;
+    }
+    
+    .skill-item {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    nav {
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .skill-item {
+        padding: 10px 14px;
+    }
+    
+    .skill-item i {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+    .skill-item span {
+        font-size: 14px;
+    }
+    
+    .skills-container {
+        padding: 20px;
+    }
+}
