@@ -189,7 +189,7 @@ main {
     background-color: #f0f0f5;
     border-color: #e0e0e8;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.1);
+    box-shadow: 0 8px 20px rgba(81, 0, 2, 1.0);
 }
 
 .skill-item i {
